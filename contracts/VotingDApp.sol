@@ -62,6 +62,22 @@ contract VotingDApp {
         ve.candidates[_candidateId].voteCount++;
     }
 
+    // get candidate name
+    function getCandidate(uint256 _eventId, uint256 _candidateId)
+        public
+        view
+        returns (
+            uint256 id,
+            string memory name,
+            uint256 voteCount
+        )
+    {
+        VotingEvent storage ve = votingEvents[_eventId];
+        require(_candidateId <= ve.candidateCount, "Invalid candidate");
+        Candidate storage candidate = ve.candidates[_candidateId];
+        return (candidate.id, candidate.name, candidate.voteCount);
+    }
+
     // === Get winner after end time ===
     function getWinner(uint256 _eventId)
         public
