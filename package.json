@@ -3,12 +3,12 @@
   "homepage": "https://hengjake.github.io/Voting-DApp/",
   "version": "1.0.0",
   "main": "index.js",
-"scripts": {
-  "test": "cd voting-DApp && npm run test",
-  "build": "cd voting-DApp && npm run build",
-  "predeploy": "npm run build",
-  "deploy": "gh-pages -d voting-DApp/dist"
-},
+  "scripts": {
+    "test": "cd voting-DApp && npm run test",
+    "build": "cd voting-DApp && npm run build",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d voting-DApp/dist"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/HengJake/Voting-DApp.git"
@@ -25,7 +25,7 @@
   },
   "dependencies": {
     "dotenv": "^17.0.1",
-    "ethers": "^6.14.4",
+    "ethers": "^6.15.0",
     "zustand": "^5.0.6"
   }
 }
