@@ -1,10 +1,14 @@
 {
   "name": "voting-dapp",
+  "homepage": "https://hengjake.github.io/Voting-DApp/",
   "version": "1.0.0",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+"scripts": {
+  "test": "cd voting-DApp && npm run test",
+  "build": "cd voting-DApp && npm run build",
+  "predeploy": "npm run build",
+  "deploy": "gh-pages -d voting-DApp/dist"
+},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/HengJake/Voting-DApp.git"
@@ -14,7 +18,6 @@
   "bugs": {
     "url": "https://github.com/HengJake/Voting-DApp/issues"
   },
-  "homepage": "https://github.com/HengJake/Voting-DApp#readme",
   "description": "",
   "devDependencies": {
     "@nomicfoundation/hardhat-toolbox": "^6.0.0",
